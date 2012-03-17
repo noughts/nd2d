@@ -68,7 +68,6 @@ package de.nulldesign.nd2d.display {
 			faceList = TextureHelper.generateQuadFromDimensions(2, 2);
 
 			if(textureObject) {
-				setMaterial(new Sprite2DMaterial());
 				setTexture(textureObject);
 			}
 		}
@@ -92,6 +91,7 @@ package de.nulldesign.nd2d.display {
 		public function setTexture(value:Texture2D):void {
 
 			this.texture = value;
+			setMaterial(new Sprite2DMaterial());
 
 			if(texture && !spriteSheet) {
 				_width = texture.bitmapWidth;
